@@ -51,3 +51,34 @@ Set-ExecutionPolicy Unrestricted -Scope CurrentUser
 pdm completion powershell | Out-File -Encoding utf8 $PROFILE\..\Completions\pdm_completion.ps1
 ```
   
+```bash
+从其他包管理器迁移
+- pdm import <filename>
+- 支持多种文件：
+  - Pipfile(pipenv)
+  - pyproject.tom(Poetry)
+  - pyproject.tom(flit)
+  - requirements.txt(pip)
+- 自动探测文件类型
+- 导出requirements.txt: pdm export -o requirements.txt
+ 
+- 虚拟环境支持： pdm -venv
+- 添加发布到Pypi命令： pdm -publish
+- 打包成可移动的zip应用：pdm -packer
+- 更多：https://github.com/pdm-project/awesome-pdm
+
+- pdm info
+- pdm add flask
+- pdm list
+- pdm list --graph
+- pdm config feature.install_cache on
+- pdm sync --reinstall
+- pdm config -d feature.insatll.cache
+- pdm plugin add pdm-venv
+- pdm venv list
+- pdm venv remove <version>
+- pdm use <version>
+- pdm run python
+- pdm install 
+- pdm plugin remove pdm-venv
+```
