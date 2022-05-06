@@ -50,9 +50,10 @@ Get-ChildItem "$PROFILE\..\Completions\" | ForEach-Object {
 Set-ExecutionPolicy Unrestricted -Scope CurrentUser
 pdm completion powershell | Out-File -Encoding utf8 $PROFILE\..\Completions\pdm_completion.ps1
 ```
-  
+### PDM 常用命令
+
 ```bash
-从其他包管理器迁移
+# 从其他包管理器迁移
 - pdm import <filename>
 - 支持多种文件：
   - Pipfile(pipenv)
