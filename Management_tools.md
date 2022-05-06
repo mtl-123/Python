@@ -1,6 +1,7 @@
 # Python 虚拟环境管理工具 PDM
 
 [PDM官网文档](https://pdm.fming.dev/)
+[PDM插件](https://github.com/pdm-project/awesome-pdm)
 
 ## Windows 系统安装PDM
 ```bat
