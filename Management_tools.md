@@ -22,7 +22,12 @@ curl -sSL https://raw.githubusercontent.com/pdm-project/pdm/main/install-pdm.py 
 ## 全局启动 PEP582
 > 为了使 Python 解释器了解 PEP 582 包，需要将 添加pdm/pep582/sitecustomize.py 到 Python 库搜索路径。
 ### Windows 用户
-> 只需执行pdm --pep582，然后环境变量将自动更改。不要忘记重启终端会话才能生效。
+> 只需执行pdm --pep582，然后环境变量将自动更改。
+> 不要忘记重启终端会话才能生效。
+```bat
+win+r打开cmd输入命令
+taskkill /f /im explorer.exe  && explorer.exe
+```
 ### Linux 用户
 > 更改环境变量的命令可以打印出来pdm --pep582 [<SHELL>]。如果<SHELL> 没有给出，PDM 将根据一些猜测选择一个。你可以运行eval "$(pdm --pep582)"来执行命令。
 > 您可能希望在您的.bash_profile（或类似的配置文件）中写一行以使其在登录时生效。例如，在 bash 中您可以这样做：
