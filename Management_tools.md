@@ -82,4 +82,5 @@ pdm completion powershell | Out-File -Encoding utf8 $PROFILE\..\Completions\pdm_
 - pdm run python
 - pdm install 
 - pdm plugin remove pdm-venv
+- pdm add -dG format black
 ```
