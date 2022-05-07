@@ -53,21 +53,6 @@ pdm completion powershell | Out-File -Encoding utf8 $PROFILE\..\Completions\pdm_
 ### PDM 常用命令
 
 ```bash
-# 从其他包管理器迁移
-- pdm import <filename>
-- 支持多种文件：
-  - Pipfile(pipenv)
-  - pyproject.tom(Poetry)
-  - pyproject.tom(flit)
-  - requirements.txt(pip)
-- 自动探测文件类型
-- 导出requirements.txt: pdm export -o requirements.txt
- 
-- 虚拟环境支持： pdm -venv
-- 添加发布到Pypi命令： pdm -publish
-- 打包成可移动的zip应用：pdm -packer
-- 更多：https://github.com/pdm-project/awesome-pdm
-
 - pdm info
 - pdm add flask
 - pdm list
@@ -83,4 +68,25 @@ pdm completion powershell | Out-File -Encoding utf8 $PROFILE\..\Completions\pdm_
 - pdm install 
 - pdm plugin remove pdm-venv
 - pdm add -dG format black
+- pdm update # 更新全部
+- pdm update requests # 更新指定
+- pdm update --update-eager requests # 更新指定及其依赖
+- pdm update --unconstrained requests # 突破版本限制升级
+- pdm update --outdated  # 查看可更新的包
+
+  # 从其他包管理器迁移
+- pdm import <filename>
+- 支持多种文件：
+  - Pipfile(pipenv)
+  - pyproject.tom(Poetry)
+  - pyproject.tom(flit)
+  - requirements.txt(pip)
+- 自动探测文件类型
+- 导出requirements.txt: pdm export -o requirements.txt
+ 
+- 虚拟环境支持： pdm -venv
+- 添加发布到Pypi命令： pdm -publish
+- 打包成可移动的zip应用：pdm -packer
+- 更多：https://github.com/pdm-project/awesome-pdm
+  
 ```
