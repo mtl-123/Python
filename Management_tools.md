@@ -4,11 +4,20 @@
 [PDM插件](https://github.com/pdm-project/awesome-pdm)
 
 ## Windows 系统安装PDM
+第一种安装方法，需要科学上网
 ```bat
 (Invoke-WebRequest -Uri https://raw.githubusercontent.com/pdm-project/pdm/main/install-pdm.py -UseBasicParsing).Content | python -
 ```
+第二种安装方法
+`pip install --user pdm`
+
 打开pdm.exe 文件位置： 按win+r键 在运行窗口中输入 %APPDATA%\Python\Scripts 回车即可跳转到pdm.exe 文件存放位置
-如果想全局使用需要把此路径添加到Windows系统的，系统属性环境变量中，然后重启电脑即可生效
+如果想全局使用需要把此路径添加到Windows系统的，系统属性环境变量中，执行下面命令即可生效
+
+```bat
+win+r打开cmd输入命令
+taskkill /f /im explorer.exe  && explorer.exe
+```
 
 
 ## Linux 系统安装PDM
@@ -24,10 +33,7 @@ curl -sSL https://raw.githubusercontent.com/pdm-project/pdm/main/install-pdm.py 
 ### Windows 用户
 > 只需执行pdm --pep582，然后环境变量将自动更改。
 > 不要忘记重启终端会话才能生效。
-```bat
-win+r打开cmd输入命令
-taskkill /f /im explorer.exe  && explorer.exe
-```
+
 ### Linux 用户
 > 更改环境变量的命令可以打印出来pdm --pep582 [<SHELL>]。如果<SHELL> 没有给出，PDM 将根据一些猜测选择一个。你可以运行eval "$(pdm --pep582)"来执行命令。
 > 您可能希望在您的.bash_profile（或类似的配置文件）中写一行以使其在登录时生效。例如，在 bash 中您可以这样做：
