@@ -99,5 +99,22 @@ pdm completion powershell | Out-File -Encoding utf8 $PROFILE\..\Completions\pdm_
 - 添加发布到Pypi命令： pdm -publish
 - 打包成可移动的zip应用：pdm -packer
 - 更多：https://github.com/pdm-project/awesome-pdm
+
+# PDM的使用
+## 创建一个虚拟环境
+- 基于3.8解释器创建一个virtualenv
+`pdm venv create 3.8`
+- 分配一个不同于版本字符串的名称
+`pdm venv create --name for-test 3.8`
+- 使用venv作为后端进行创建，支持3个后端:virtualenv(默认)，venv, conda
+`pdm venv create --with venv 3.9`
+- 激活虚拟环境
+`pdm venv activate for-test`
+- 查看创建的虚拟环境
+`pdm venv list`
+
+## 删除虚拟环境
+`pdm venv remove for-test`
+
   
 ```
