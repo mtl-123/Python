@@ -10,7 +10,34 @@
 ```
 第二种安装方法
 `pip install --user pdm`
+- 注：PDM只支持python3.7 以上版本一般系统没有安装高于3.7的版本和pip 安装方法如下：
+```bash
+# 增加 ppa 仓库，并更新源数据
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+# 如果提示找不到 add-apt-repository 命令，执行如下命令安装
+sudo apt install software-properties-common
+# 更新完成源数据之后，就可以安装 ppa 仓库中的包了，这个仓库中不止是包含 python3.8，还包含其他版本的 python 包，详细情况可查看链接：
+https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa
+# 执行以下命令安装 python3.8 相关的包：
+sudo apt install python3.8 python3.8-dev python3.8-distutils python3.8-venv -y
+# 安装完成后，当需要使用 3.8 版本的 python 时，执行：
+python3.8 --version
+# 安装 pip
+# 当需要使用 pip 时，由于系统源里的 pip 是 python3.5 对应的，所以针对 python3.8 并不能正常工作，比如使用 virtualenv 创建 python3.8 的虚拟环境时就会报错，可以执行如下命令查看 pip 是对应哪个 python 版本的：
+pip3 --version （可能的输出如下，注意最后括号里的内容）
 
+pip 8.1.1 from /usr/lib/python3/dist-packages (python 3.5)
+# 前面新增的 ppa 仓库中，只有 python 的包，没有 pip 的，所以需要额外的安装方法，参考 pip 官方安装教程：https://pip.pypa.io/en/stable/installation/，使用如下方法安装 python3.8 对应的 pip：
+wget -O /tmp/get-pip.py https://bootstrap.pypa.io/get-pip.py
+python3.8 /tmp/get-pip.py
+# 下载的pip3.8 程序路径位于 cd ./home/m/.local/bin/
+sudo cp /home/m/.local/bin/pip3.8 /usr/local/bin/
+# 上面的两个命令是，下载 pip 官方安装脚本，然后使用 python3.8 执行安装脚本，执行完成后就安装好了 python3.8 对应的 pip，执行如下命令检验：
+pip --version
+pip3 --verison
+pip3.8 --version
+```
 打开pdm.exe 文件位置： 按win+r键 在运行窗口中输入 %APPDATA%\Python\Scripts 回车即可跳转到pdm.exe 文件存放位置
 如果想全局使用需要把此路径添加到Windows系统的，系统属性环境变量中，执行下面命令即可生效
 
