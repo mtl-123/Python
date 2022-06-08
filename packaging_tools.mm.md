@@ -37,3 +37,5 @@
 - 这里需要找到这些包（我的是在software\python3.7\Lib\site-packages下）复制（比如numpy,cv2这个文件夹）到demo.dist路径下。
 - 至此，exe能完美运行啦！
 # pyinstaller
+
+[C语言中文网](http://c.biancheng.net/view/2690.html)
