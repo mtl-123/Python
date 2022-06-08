@@ -21,7 +21,7 @@
 
 ### 参数详解：
 |   参数     |    作用 | 
-| :--------: | :--------:| 
+| :-------- | :-------- | 
 | --standalone | 方便移植到其他机器，不用再安装python|
 | --show-memory --show-progress |展示整个安装的进度过程 |
 |--nofollow-imports | 不编译代码中所有的import，比如keras，numpy之类的|
