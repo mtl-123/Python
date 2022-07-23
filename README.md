@@ -12,3 +12,7 @@ fake = Faker()
 print(fake.profile())
 print(fake.credit_card_number())
 ```
+
+# 快速创建项目的方法
+
+https://zhuanlan.zhihu.com/p/101544546
