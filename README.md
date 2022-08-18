@@ -1,6 +1,15 @@
 # 项目目录
+## Python 学习网站
 
 [在线编辑学习网站非常不错](https://www.codecademy.com/)
+
+[Python中文学习大本营](http://www.pythondoc.com/)
+
+[Python Code Examples](https://www.programcreek.com/python/)
+
+[Flask](http://www.pythondoc.com/)
+
+[Python学习网](https://www.py.cn/)
 
 [Web Flask 开发项目](./web_framework/flask_proj/)
 
