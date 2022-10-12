@@ -1,6 +1,8 @@
 # 项目目录
 ## Python 学习网站
 
+[Python官网中文文档](https://docs.python.org/zh-cn/3/whatsnew/3.10.html)
+
 [在线编辑学习网站非常不错](https://www.codecademy.com/)
 
 [Python中文学习大本营](http://www.pythondoc.com/)
